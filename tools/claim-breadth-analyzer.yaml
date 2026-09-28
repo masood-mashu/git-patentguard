@@ -1,0 +1,18 @@
+name: claim-breadth-analyzer
+version: 1.0.0
+description: "Analyzes independent claim limitation count to assess scope breadth and patentability"
+input_schema:
+  type: object
+  properties:
+    claim_text:
+      type: string
+      description: "Full text of an independent patent claim"
+  required:
+    - claim_text
+implementation:
+  type: script
+  path: claim_breadth_analyzer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

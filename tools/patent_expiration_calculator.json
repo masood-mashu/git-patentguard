@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "patent_expiration_calculator",
+  "description": "Calculates 20-year statutory patent expiration date from initial non-provisional filing date",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "filing_year": {
+        "type": "string",
+        "description": "Four digit integer filing year (e.g. 2020)"
+      }
+    },
+    "required": [
+      "filing_year"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

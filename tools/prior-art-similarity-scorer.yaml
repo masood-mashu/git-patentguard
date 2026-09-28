@@ -1,0 +1,18 @@
+name: prior-art-similarity-scorer
+version: 1.0.0
+description: "Scores textual similarity between proposed invention claims and cited prior art references"
+input_schema:
+  type: object
+  properties:
+    claim_comparison_json:
+      type: string
+      description: "JSON string containing claim_text and prior_art_text"
+  required:
+    - claim_comparison_json
+implementation:
+  type: script
+  path: prior_art_similarity_scorer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

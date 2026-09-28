@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "claim_breadth_analyzer",
+  "description": "Analyzes independent claim limitation count to assess scope breadth and patentability",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "claim_text": {
+        "type": "string",
+        "description": "Full text of an independent patent claim"
+      }
+    },
+    "required": [
+      "claim_text"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
